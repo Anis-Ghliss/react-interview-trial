@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+import SearchBox from './SearchBox'
 
 function Nav() {
+
   const [clickedMovie, setClickedMovie] = useState(true);
   const [clickedTvshow, setClickedTvshow] = useState(false);
+
   return (
     <nav>
       <ul className="nav-links">
@@ -32,22 +35,12 @@ function Nav() {
         </Link>
       </ul>
 
-      <form className="wrap">
-        <div className="floating-label-group">
-          <input
-            type="text"
-            id="username"
-            className="form-control"
-            autoComplete="off"
-            autoFocus
-            required
-          />
-          <label className="floating-label">
-            Search <i className="fa fa-search"></i>
-          </label>
-        </div>
-      </form>
+     <SearchBox/>
     </nav>
   );
 }
+
+
+
 export default Nav;
+

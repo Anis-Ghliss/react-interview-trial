@@ -1,9 +1,11 @@
 import React,{useState,useEffect} from 'react';
+import "react-bootstrap-typeahead/css/Typeahead.css";
 import './App.css';
 import Movie from './components/Movies'
 import Tvshow from './components/TvShows'
 import Nav from './components/Nave'
 import Details from './components/Details'
+import Apikey from './apkiKeys'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 
@@ -13,23 +15,20 @@ function App() {
   const [tvShows,setTvShows] = useState([])
 
   useEffect(()=>{
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=9d53106069f72bac07db98c4a220b731")
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${Apikey.TMDBKEY}`)
       .then( response => response.json())
       .then(data => {
         setMovies(data["results"])
       })
       .catch(console.log())
 
-    fetch("https://api.themoviedb.org/3/tv/popular?api_key=9d53106069f72bac07db98c4a220b731")
+      fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${Apikey.TMDBKEY}`)
     .then( response => response.json())
       .then(data => {
         setTvShows(data["results"])
       })
       .catch(console.log())
-    },
-
-
-  [])
+    }, [])
 
 
   return (

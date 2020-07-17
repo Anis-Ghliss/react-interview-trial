@@ -36,6 +36,7 @@ function App() {
         <Nav />
         <Switch>
           <Route
+            exact
             path="/"
             render={(props) => <Movie {...props} movies={movies} />}
           />

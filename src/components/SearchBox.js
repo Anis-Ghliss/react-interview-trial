@@ -3,7 +3,6 @@ import { AsyncTypeahead } from "react-bootstrap-typeahead";
 import Apikey from "../apkiKeys";
 import { NavLink } from "react-router-dom";
 
-
 function SearchBox() {
   const [isLoading, setIsLoading] = useState(false);
   const [options, setOptions] = useState([]);
@@ -20,7 +19,7 @@ function SearchBox() {
           title: i.title,
           id: i.id,
           poster: i.poster_path,
-          type:i.media_type
+          type: i.media_type,
         }));
         setOptions(options);
         setIsLoading(false);
@@ -28,19 +27,6 @@ function SearchBox() {
   };
 
   return (
-    //   <form className="wrap">
-    //   <div className="floating-label-group">
-    //     <input
-    //       type="text"
-    //       id="username"
-    //       className="form-control"
-    //       autoComplete
-    //       autoFocus
-    //       required
-    //     />
-    //
-    //   </div>
-    // </form>
     <form action="" className="wrap">
       <AsyncTypeahead
         id="async-example"
@@ -53,8 +39,9 @@ function SearchBox() {
         placeholder="Search for a movie or a tv show  ... "
         renderMenuItemChildren={(option, props) => (
           <Fragment>
-            <NavLink to={"/details/"+option.id+"/"+option.type}>
-              <span className="search-item">{option.title}</span><br/>
+            <NavLink to={"/details/" + option.id + "/" + option.type}>
+              <span className="search-item">{option.title}</span>
+              <br />
             </NavLink>
           </Fragment>
         )}

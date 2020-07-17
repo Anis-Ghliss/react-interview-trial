@@ -1,21 +1,21 @@
-
-*{
-  background-color:   #263238  ;
+* {
+  background-color: #263238;
   color: white;
   text-decoration: none;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   background-color: #263238;
   position: fixed;
   font-weight: bold;
   font-size: 17px;
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.5);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .5);
   position: sticky;
 }
-.nav-links{
+
+.nav-links {
   display: flex;
   justify-content: space-evenly;
   padding: 0;
@@ -23,7 +23,8 @@ nav{
   width: 700px;
   text-align: center;
 }
-.nav-links > .nav-style   {
+
+.nav-links>.nav-style {
   position: relative;
   padding: 15px 0;
   color: white;
@@ -34,7 +35,7 @@ nav{
   position: relative;
 }
 
-.nav-links > .nav-style:after{
+.nav-links>.nav-style:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -47,12 +48,12 @@ nav{
   width: 0;
 }
 
-.nav-links > .nav-style:hover:after {
+.nav-links>.nav-style:hover:after {
   width: 100%;
   left: 0;
 }
 
-.nav-links > .mount-style   {
+.nav-links>.mount-style {
   position: relative;
   padding: 15px 0;
   color: white;
@@ -64,7 +65,7 @@ nav{
   cursor: pointer;
 }
 
-.nav-links > .mount-style:after{
+.nav-links>.mount-style:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -77,13 +78,13 @@ nav{
   width: 100%;
 }
 
-form{
+form {
   margin-top: 25px;
   margin-right: 400px;
 }
 
 // the input search class
-.rbt-input-main  {
+.rbt-input-main {
   width: 250px;
   height: 30px;
   position: absolute;
@@ -95,14 +96,14 @@ form{
 
 }
 
-.search-item{
+.search-item {
   text-decoration: none;
   font-weight: 100;
   background-color: rgba($color: #000000, $alpha: 0.5)
 }
 
 // the lists of suggestions
-.rbt-menu{
+.rbt-menu {
   border: 1px solid white;
   position: fixed;
   max-height: 95px !important;
@@ -131,14 +132,14 @@ form{
   background: #079E65;
 }
 
-.movie-poster{
+.movie-poster {
   width: 100%;
   height: 250px;
   border-radius: 5px;
   margin-bottom: 7px;
 }
 
-.movies-container{
+.movies-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   padding: 10px;
@@ -146,11 +147,11 @@ form{
   margin-top: 15px;
 }
 
-.movie-item-container{
+.movie-item-container {
   max-height: 400px;
   margin-top: 15px;
   position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
   border: 1px solid black;
@@ -162,15 +163,17 @@ form{
 
 }
 
-.movie-item-container:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  transform:scale(1.1);
+.movie-item-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
   transition: all 0.4s ease-in-out;
   border: 1px solid white;
   opacity: 1;
-  .movie-plot{
+
+  .movie-plot {
     opacity: 1;
   }
+
   cursor:pointer;
 }
 
@@ -180,45 +183,48 @@ form{
   height: 4vh;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid ;
+  border: 1px solid;
   outline: none;
   align-content: center;
 }
 
-.hide{
+.hide {
   display: flex;
   justify-content: space-evenly;
 }
 
 
-.detail-btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+.detail-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.more-details{
+
+.more-details {
   float: right;
   margin-top: 10px;
 }
 
-.movie-title{
+.movie-title {
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
   font-weight: bold;
   width: 250px;
 }
-.movie-date{
+
+.movie-date {
   opacity: 0.6;
   font-style: italic;
 }
-.info-details{
+
+.info-details {
   width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.card{
-  margin : 40px 130px 40px 330px;
+.card {
+  margin: 40px 130px 40px 330px;
   height: fit-content;
   border: 1px solid white;
   border-radius: 0 0 5px 5px;
@@ -227,18 +233,18 @@ form{
   height: fit-content;
 }
 
-.poster{
-  width:40%
+.poster {
+  width: 40%
 }
 
-.image-poster{
+.image-poster {
   width: 100%;
   height: 100%;
 }
 
-.dtails{
-  color: #006064 ;
-  padding-left:10px;
+.details {
+  color: #006064;
+  padding-left: 10px;
   padding-right: 8px;
   text-decoration: none;
   letter-spacing: 0.05em;

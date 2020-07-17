@@ -1,12 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Demo
-This project is deployed using Netlify to check the demo visit this link : https://movie-tvshow-reactapp.netlify.app/
+This project is deployed using Netlify to check the demo visit this link : https://movie-tvshow-reactapp.netlify.app/ .
 
 ## What I've used 
-  React Hooks 
-  Sass
-  [The Movie Database API] (https://developers.themoviedb.org/3)
-  And some design insperation from [https://github.com/SKempin/reactjs-tmdb-app] 
+  React Hooks. 
+  Sass.
+  [The Movie Database API] (https://developers.themoviedb.org/3).
+  And some design insperation from [https://github.com/SKempin/reactjs-tmdb-app]. 
   
 ## Available Scripts
 

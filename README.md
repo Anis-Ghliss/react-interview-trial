@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 I am currently learning React Hooks so as a practise, I have decided to build a simple React application that gives details about movies or tv shows using The Movie Database API.  
 
 ## Demo
-This project is deployed using Netlify to check the demo visit this link : https://movie-tvshow-reactapp.netlify.app/ .
+This project is deployed using Netlify. To check the demo visit this link : https://movie-tvshow-reactapp.netlify.app/ .
 
 ## What I've used 
   React Hooks. <br />

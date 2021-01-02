@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Apikey from "../apkiKeys";
+import React, { useState, useEffect } from 'react';
+import Apikey from '../apkiKeys';
 
 function nestedDataToString(nestedData) {
   const nestedArray = [];
@@ -9,7 +9,7 @@ function nestedDataToString(nestedData) {
       nestedArray.push(item.name);
     });
   }
-  resultString = nestedArray.join(","); // array to string
+  resultString = nestedArray.join(','); // array to string
   return resultString;
 }
 
@@ -28,21 +28,21 @@ function Details(props) {
   }, [url]);
   console.log(`this is me${data.poster_path}`);
   return (
-    <div className="details-container">
-      <div className="card">
-        <div className="poster">
+    <div className='details-container'>
+      <div className='card'>
+        <div className='poster'>
           <img
             src={
               data.poster_path !== null
                 ? `https://image.tmdb.org/t/p/w500${data.poster_path}`
-                : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1n9bfmCTHgCTIhuzQtWVf9KZqOFbF_GJkCw&usqp=CAU"
+                : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1n9bfmCTHgCTIhuzQtWVf9KZqOFbF_GJkCw&usqp=CAU'
             }
-            className="image-poster"
-            alt=""
+            className='image-poster'
+            alt=''
           />
         </div>
-        <div className="details">
-          {type === "movie" ? (
+        <div className='details'>
+          {type === 'movie' ? (
             <InfoDetail
               name={data.title}
               tagline={data.tagline}
@@ -72,43 +72,43 @@ function Details(props) {
 export function InfoDetail(props) {
   return (
     <div>
-      <h1 style={{ textTransform: "uppercase" }}>{props.name}</h1>
-      <h3 style={{ textTransform: "uppercase", color: "#079E65" }}>
+      <h1 style={{ textTransform: 'uppercase' }}>{props.name}</h1>
+      <h3 style={{ textTransform: 'uppercase', color: '#079E65' }}>
         {props.tagline}
       </h3>
-      <h3 style={{ textTransform: "uppercase", color: "#079E65" }}>
+      <h3 style={{ textTransform: 'uppercase', color: '#079E65' }}>
         {props.season}
       </h3>
       <p>{props.plot}</p>
-      <h3 style={{ textTransform: "uppercase", color: "#079E65" }}>
-        {" "}
+      <h3 style={{ textTransform: 'uppercase', color: '#079E65' }}>
+        {' '}
         GENRES : {props.genre}
       </h3>
-      <h3 style={{ textTransform: "uppercase", color: "#079E65" }}>
+      <h3 style={{ textTransform: 'uppercase', color: '#079E65' }}>
         Vote Average : {props.vote}/10
       </h3>
       <h5>
-        <i style={{ opacity: "0.6" }}>Release Date : {props.date}</i>
+        <i style={{ opacity: '0.6' }}>Release Date : {props.date}</i>
       </h5>
       <button
         style={{
-          color: "white",
-          textTransform: "uppercase",
-          backgroundColor: "#079E65",
-          marginLeft: "340px",
-          height: "30px",
-          border: "none",
-          marginBottom: "8px",
+          color: 'white',
+          textTransform: 'uppercase',
+          backgroundColor: '#079E65',
+          marginLeft: '340px',
+          height: '30px',
+          border: 'none',
+          marginBottom: '8px',
         }}
       >
         <a
           href={props.trailer}
           style={{
-            textDecoration: "none",
-            color: "white",
-            cursor: "pointer",
-            backgroundColor: "#079E65",
-            marginBottom: "8px",
+            textDecoration: 'none',
+            color: 'white',
+            cursor: 'pointer',
+            backgroundColor: '#079E65',
+            marginBottom: '8px',
           }}
         >
           Home Page

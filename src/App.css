@@ -162,23 +162,11 @@ form {
 .movies-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 10px;
   grid-column-gap: 20px;
   margin-top: 15px;
-}
-
-@media screen and (max-width: 960px) {
-  .movies-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    padding: 10px;
-    grid-column-gap: 20px;
-    margin-top: 15px;
-  }
 }
 
 .movie-item-container {

@@ -1,0 +1,74 @@
+nav {
+  display: flex;
+
+  justify-content: space-between;
+  background-color: #263238;
+  position: fixed;
+  font-weight: bold;
+  font-size: 17px;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+  position: sticky;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  list-style: none;
+  width: 700px;
+  text-align: center;
+}
+
+.nav-links > .nav-style {
+  position: relative;
+  padding: 15px 0;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.nav-links > .nav-style:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-links > .nav-style:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-links > .mount-style {
+  position: relative;
+  padding: 15px 0;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  padding: 15px 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-links > .mount-style:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 100%;
+}

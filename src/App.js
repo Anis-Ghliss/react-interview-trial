@@ -1,51 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "react-bootstrap-typeahead/css/Typeahead.css";
 import "./App.css";
-import Movie from "./components/Movies";
-import Tvshow from "./components/TvShows";
-import Nav from "./components/Nave";
-import Details from "./components/Details";
-import Apikey from "./apkiKeys";
+import { setMovies } from "./redux/actions";
+import Movies from "./pages/movies/Movies";
+import { getMovies } from "./api/getMovies";
+import { useDispatch } from "react-redux";
+import Nav from "./components/nav/Nave";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const [movies, setMovies] = useState([]);
-  const [tvShows, setTvShows] = useState([]);
-
+  const [isLoading, setLoading] = useState(true);
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${Apikey.TMDBKEY}`
-    )
-      .then((response) => response.json())
+    getMovies()
       .then((data) => {
-        setMovies(data["results"]);
+        console.log("someting");
+        dispatch(setMovies(data));
+        setLoading(false);
       })
-      .catch(console.log());
+      .catch((err) => console.error(err));
+  }, [dispatch]);
 
-    fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${Apikey.TMDBKEY}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setTvShows(data["results"]);
-      })
-      .catch(console.log());
-  }, []);
+  if (isLoading) {
+    return (
+      <div>
+        <h1>Loading movies ...</h1>
+      </div>
+    );
+  }
 
   return (
     <Router>
       <div className="App">
         <Nav />
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={(props) => <Movie {...props} movies={movies} />}
-          />
-          <Route
-            exact
-            path="/tvshows"
-            render={(props) => <Tvshow {...props} tvshows={tvShows} />}
-          />
-          <Route exact path="/details/:id/:type" component={Details} />
+          <Route exact path="/" component={() => <Movies />} />
         </Switch>
       </div>
     </Router>

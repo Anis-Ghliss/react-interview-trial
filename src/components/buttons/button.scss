@@ -1,0 +1,29 @@
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.button-container {
+  padding: 5px;
+  border: 1px solid gray;
+  width: 50px;
+  height: 30px;
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+.button-container:focus {
+  animation: bounce 0.7s ease;
+  color: blue;
+}

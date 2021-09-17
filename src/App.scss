@@ -3,84 +3,6 @@
   color: white;
   text-decoration: none;
   box-sizing: border-box;
-
-}
-
-
-nav {
-  display: flex;
-
-  justify-content: space-between;
-  background-color: #263238;
-  position: fixed;
-  font-weight: bold;
-  font-size: 17px;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .5);
-  position: sticky;
-
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0;
-  list-style: none;
-  width: 700px;
-  text-align: center;
-}
-
-.nav-links>.nav-style {
-  position: relative;
-  padding: 15px 0;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-  padding: 15px 20px;
-  position: relative;
-}
-
-.nav-links>.nav-style:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-
-.nav-links>.nav-style:hover:after {
-  width: 100%;
-  left: 0;
-}
-
-.nav-links>.mount-style {
-  position: relative;
-  padding: 15px 0;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-  padding: 15px 20px;
-  position: relative;
-  cursor: pointer;
-}
-
-.nav-links>.mount-style:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 0;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 100%;
 }
 
 form {
@@ -98,13 +20,12 @@ form {
   background: transparent;
   border-bottom: 1px solid white;
   padding-left: 4px;
-
 }
 
 .search-item {
   text-decoration: none;
   font-weight: 100;
-  background-color: rgba($color: #000000, $alpha: 0.5)
+  background-color: rgba($color: #000000, $alpha: 0.5);
 }
 
 // the lists of suggestions
@@ -120,21 +41,18 @@ form {
   width: 5px;
 }
 
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
-
 
 ::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 10px;
 }
 
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #079E65;
+  background: #079e65;
 }
 
 .movie-poster {
@@ -143,12 +61,11 @@ form {
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 7px;
-  @media screen and (max-width:960px){
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
   }
-
 }
 
 .movies-container {
@@ -157,42 +74,7 @@ form {
   padding: 10px;
   grid-column-gap: 20px;
   margin-top: 15px;
-
 }
-
-.movie-item-container {
-  max-height: 100%;
-  margin-top: 15px;
-  position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border-radius: 5px;
-  border: 1px solid black;
-  padding: 5px;
-  transition: all 0.4s ease-in-out;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
-  @media screen and (max-width : 960px){
-    max-height: fit-content;
-  }
-
-}
-
-.movie-item-container:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  transition: all 0.4s ease-in-out;
-  border: 1px solid white;
-  opacity: 1;
-
-  .movie-plot {
-    opacity: 1;
-  }
-
-  cursor:pointer;
-}
-
 
 .detail-btn {
   width: 4vh;
@@ -209,7 +91,6 @@ form {
   justify-content: space-evenly;
 }
 
-
 .detail-btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -220,75 +101,53 @@ form {
   margin-top: 10px;
 }
 
-.movie-title {
-  font-family: 'Roboto', sans-serif;
-  font-size: 17px;
-  font-weight: bold;
-  width: 250px;
-}
-
 .movie-date {
   opacity: 0.6;
   font-style: italic;
 }
-
-.info-details {
-  width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-
-
 
 .image-poster {
   width: 100%;
   height: auto;
 }
 
-
-
-
 .details-container {
   width: 90%;
   margin: auto;
   margin-top: 15px;
-  @media screen and (max-width:980px){
+  @media screen and (max-width: 980px) {
     width: 90%;
-  margin: auto;
+    margin: auto;
   }
 }
 
 .card {
   display: flex;
   border: 1px solid white;
-  justify-content:space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
   height: fit-content;
-  @media screen and (max-width:980px){
-   flex-direction: row;
-   width: fit-content;
+  @media screen and (max-width: 980px) {
+    flex-direction: row;
+    width: fit-content;
   }
-
 }
 
-.poster{
+.poster {
   flex: 1 1 400px; /*  Stretching: */
   margin: 5px;
   height: fit-content;
-  @media screen and (max-width:980px){
+  @media screen and (max-width: 980px) {
     width: 100%;
     height: 30%;
     object-fit: cover;
-   }
+  }
 
-   img{
-     width: 100%;
-     height: fit-content;
-     object-fit: fill;
-   }
+  img {
+    width: 100%;
+    height: fit-content;
+    object-fit: fill;
+  }
 }
 
 .details {

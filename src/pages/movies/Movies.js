@@ -5,17 +5,18 @@ import Card from "../../components/card/Card";
 import Select from "react-select";
 import { getCategories, filtredData } from "../../utils/getCategories";
 import { Button } from "../../components/buttons/Button";
+import "./movies.scss";
+
 function Movie() {
   const movies = useSelector((state) => state.movies[0]);
   const filtredMovies = useSelector((state) => state.filtredMovies[0]);
   const dispatcher = useDispatch();
-  console.log("Im in movie", getCategories(movies));
-  const arr = filtredMovies === [] ? movies : filtredMovies;
+
   return (
     <div>
       <h2 style={{ marginLeft: "25px" }}>POPULAR MOVIES</h2>
       <div className="movies-container">
-        {arr.map((movie) => {
+        {movies.map((movie) => {
           console.log("sdfsdf", movie);
           return (
             <Card
@@ -28,22 +29,24 @@ function Movie() {
           );
         })}
       </div>
-      <Select
-        isMulti
-        name="categories"
-        onChange={(e) => {
-          console.log(e);
-          dispatcher(filter(filtredData(e)));
-        }}
-        options={getCategories(movies)}
-        className="basic-multi-select"
-        classNamePrefix="select"
-      />
-
+      <div style={{ width: "60%", margin: "auto", color: "white" }}>
+        <Select
+          isMulti
+          name="categories"
+          onChange={(e) => {
+            console.log(e);
+            dispatcher(filter(filtredData(e)));
+          }}
+          options={getCategories(movies)}
+          className="basic-multi-select select"
+          width="80px"
+          classNamePrefix="select"
+        />
+      </div>
       <div
         style={{
           margin: "auto",
-          width: "250px",
+          width: "400px",
           display: "flex",
           justifyContent: "space-evenly",
           marginTop: "25px",
